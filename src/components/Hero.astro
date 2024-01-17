@@ -1,0 +1,40 @@
+---
+const {hero, desc, image} = Astro.props;
+---
+
+<div>
+    <img src={image} alt="">
+    <h1>{hero}</h1>
+    <p>{desc}</p>
+</div>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+
+        background-image: url('https://images.unsplash.com/photo-1682687981715-fa2ff72bd87d?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    h1{
+        font-size: 3rem;
+        color: white;
+    }
+    p{
+        font-size: 1.5rem;
+        color: white;
+    }
+    img{
+        /* pon la imagen de fondo en el div */
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+</style>
